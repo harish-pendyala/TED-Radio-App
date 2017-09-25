@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Assignment: Homework07
+File name: activity_main.xml
+Full Name: Harish Pendyala, Hemanth Sai Thota
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="1dp"
+    tools:context="com.example.heman.group14_hw07.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/episodesList"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="vertical" />
+
+    <ImageView
+        android:id="@+id/control"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/episodesList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/pause1" />
+
+    <SeekBar
+        android:id="@+id/play_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/control"
+        android:layout_marginTop="19dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>
